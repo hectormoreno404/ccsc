@@ -1,0 +1,33 @@
+
+<div class="busqueda">		  		
+	<input type="text" placeholder="Nombre o Apellido" class="form-control">	
+</div>
+
+	
+
+	<% @newborns.each do |newborn| %>	
+		<%= link_to(newborn) do %>
+		<div class="item">
+			
+			<div class="cont">
+				<img class="imagen" src="/baby-cut.jpg" alt="un bebe adorable">
+			<h3><%= newborn.first_name %></h3>
+			<h3 style="margin-top: 0;"><%= newborn.last_name %></h3>			
+			<p><%= newborn.birthdate %></p>
+			<% if user_signed_in? %>
+			<%= link_to "Eliminar", newborn, method: :delete%> <%= link_to "Editar", edit_newborn_path(newborn)%>
+			<%end%>
+			</div>
+		</div>	
+		<%end%>
+	<%end%>
+	
+
+
+	
+	
+
+
+
+
+	

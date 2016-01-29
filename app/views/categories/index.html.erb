@@ -1,0 +1,18 @@
+<div class="row">
+  
+ 
+  <% @categories.each do |a|%>
+  <div class="col-md-3">
+    <%= link_to (a) do %>
+      <div class="thumbnail">
+        <img src="http://codeproject.cachefly.net/App_Themes/CodeProject/Img/logo250x135.gif">
+        <div class="caption">
+          <h3 class="title"><%= a.name%>  </h3>          
+        </div>
+      </div>
+    <% end %>
+     <% end %>
+  </div>
+  
+  
+</div>

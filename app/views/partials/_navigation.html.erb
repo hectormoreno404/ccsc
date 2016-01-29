@@ -1,0 +1,16 @@
+<div class="container">
+		<div class="row">
+			<ul class="nav">
+				  <li role="presentation"><%= link_to "Home", root_path %></li>
+				  <li role="presentation"><%= link_to "Recien Nacidos", newborns_path %></li>
+
+				  <% if user_signed_in? %>
+				  	<li role="presentation"><a href="/newborns/new">Registrar Recien Nacido</a></li>
+				  	<li role="presentation"><%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete %></li>
+				  <% else%>
+				  	<li role="presentation"><%= link_to "Iniciar Sesion", new_user_session_path %></li>
+				  <% end %>
+			</ul>
+		</div>
+				
+		</div>
